@@ -5,7 +5,8 @@ from contextlib import closing
 import urllib.request
 import json
 import sys
-url = 'http://freegeoip.net/json/1.1.1.1'
+Url_Input = "www.lifestylerhythmsfitness.com.au" #this is the website you want to search
+url = 'http://freegeoip.net/json/' + Url_Input
 with closing(urllib.request.urlopen(url)) as response:
     for line in response:
         # print(line.decode('utf-8'))
