@@ -23,10 +23,11 @@ with closing(urllib.request.urlopen(url)) as response:
         print("ip : "+location_ip)
         print(location)
 
-def gioIP(self):
+def gioIP(Url_Input):
     url = 'http://freegeoip.net/json/' + Url_Input
     with closing(urllib.request.urlopen(url)) as response:
         for line in response:
+            print(Url_Input)
             # print(line.decode('utf-8'))
             location = json.loads(line.decode('utf-8'))
             location_ip = location['ip']
@@ -42,3 +43,5 @@ def gioIP(self):
             print(location)
 
 gioIP("www.cnn.com")
+gioIP("www.sportspeople.com.au")
+gioIP("www.emaratech.ae")
